@@ -216,9 +216,9 @@ class VOCMeanAP(BaseMetric):
 
                 - bboxes (numpy.ndarray): Shape (N, 4), the predicted
                   bounding bboxes of this image, in 'xyxy' foramrt.
-                - scores (numpy.ndarray): Shape (N, 1), the predicted scores
+                - scores (numpy.ndarray): Shape (N, ), the predicted scores
                   of bounding boxes.
-                - labels (numpy.ndarray): Shape (N, 1), the predicted labels
+                - labels (numpy.ndarray): Shape (N, ), the predicted labels
                   of bounding boxes.
 
             groundtruths (Sequence[dict]): A sequence of dict. Each dict
@@ -227,12 +227,12 @@ class VOCMeanAP(BaseMetric):
 
                 - bboxes (numpy.ndarray): Shape (M, 4), the ground truth
                   bounding bboxes of this image, in 'xyxy' foramrt.
-                - labels (numpy.ndarray): Shape (M, 1), the ground truth
+                - labels (numpy.ndarray): Shape (M, ), the ground truth
                   labels of bounding boxes.
                 - bboxes_ignore (numpy.ndarray): Shape (K, 4), the ground
                   truth ignored bounding bboxes of this image,
                   in 'xyxy' foramrt.
-                - labels_ignore (numpy.ndarray): Shape (K, 1), the ground
+                - labels_ignore (numpy.ndarray): Shape (K, ), the ground
                   truth ignored labels of bounding boxes.
         """
         for prediction, groundtruth in zip(predictions, groundtruths):
